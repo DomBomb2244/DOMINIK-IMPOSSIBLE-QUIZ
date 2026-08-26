@@ -1,0 +1,21 @@
+html, body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -10000000000;
+    color: white;
+    font-family: "Stardos Stencil";
+    font-weight: lighter;
+    text-align: center;
+}
+h1 {
+    font-size: 4em;
+    color: red;
+    font-weight: bolder;
+}

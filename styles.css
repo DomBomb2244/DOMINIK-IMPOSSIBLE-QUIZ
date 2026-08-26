@@ -1,0 +1,61 @@
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url("cover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -10000000000;
+}
+.button {
+    height: 100px;
+    width: 300px;
+    transition: 0.5s ease-out;
+}
+.button:hover {
+    transform: scale(110%);
+}
+button {
+    height: 100%;
+    width: 100%;
+    border-radius: 10000000px;
+    border: none;
+    background-color: rgb(190, 0, 0);
+    font-size: 2em;
+    font-family: "Stardos Stencil";
+    font-weight: 400;
+    font-style: normal;
+    transition: 0.5s;
+    position: relative;
+}
+button::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color:  rgb(190, 0, 0);
+    border-radius: 10000000px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    filter: blur(1.5rem);
+    padding: 5%;
+}
+button:hover {
+    animation: shake 0.15s ease-in-out infinite;
+}
+@keyframes shake {
+    0% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
