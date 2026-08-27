@@ -17,6 +17,14 @@ const scoreDisplay = document.getElementById('scoreDisplay');
 let correctAnswerElement = document.getElementById('answer' + correctAnswer);
 let selectedAnswerElement = document.getElementById('answer' + selectedAnswer);
 
+function keepAtBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
+    requestAnimationFrame(keepAtBottom);
+}
+
+keepAtBottom();
+document.body.style.overflow = "hidden";
+
 questionNumElement.innerHTML = "Question " + questionNum;
 question.innerHTML = "What is my name?";
 image.src = "whome.jpg";
